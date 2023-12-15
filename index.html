@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/856fb5f83b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="nav">
+
+                <div class="logo">
+                    <h2><span>R</span>amana</h2>
+                </div>
+
+                <ul class="lists">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="menu" id="menu">
+                <p><i class="fa-solid fa-bars"></i></p>
+            </div>
+        </div>
+
+        <div class="nav-text">
+
+            <div class="content">
+                <p>Web Developer</p>
+
+                <h3 class="name">Hi, I'M <span>Ramana</span> <br>From INDIA</h3>
+            </div>
+
+            <img src="images/bg2.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="about_img">
+            <img src="images/about.png" alt="">
+        </div>
+        <div class="about_content">
+            <h2>About Me</h2>
+            <p> I'm Ramana, the super-duper creative person who loves colors, shapes, and making cool stuff! <br> I live
+                in Tirupur,TamilNadu. where I draw, play, and imagine all day. Wanna see the amazing things <br> I've
+                made? Check out my portfolio—it's like a treasure chest of awesome ideas and giggles. Come <br>
+                join the fun, and let's make the world a little more sparkly together!. Explore my portfolio to discover
+                <br>how I blend Web Developing and creating experiences that resonate. Welcome to my creative space!"
+
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI&UX</span><br>Designing Web app Interfaces</li>
+                    <li><span>Web development</span><br> web app Development</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023 - current</span><br> Web developing training at Nobel Software Solutions</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2023 - current</span><br> Web developing training at Nobel Software Solutions</li>
+                    <li><span>2020 - 2023</span><br> BBA CA </li>
+                    <li><span>2018 - 2020</span><br> ksc Goverment Higher Secondary School </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------services------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="list-box">
+                    <h2>Web design</h2>
+                    <p>"Revitalize your online presence with our <br>expert web design services, combining stunning
+                        visuals and seamless functionality. Elevate your brand's digital identity with Your Ramana.</p>
+                    <a href="">learn more</a>
+                </div>
+                <div class="list-box">
+                    <h2>Web App</h2>
+                    <p> Empower your business with our cutting-edge web app development services, delivering innovation
+                        and functionality in every line of code.</p>
+                    <a href="">learn more</a>
+                </div>
+
+                <div class="list-box">
+                    <h2>UI & UX</h2>
+                    <p>Crafting digital experiences that captivate. Elevate your brand with our expert web design
+                        services at Your Ramana .</p>
+                    <a href="">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------contact---- -->
+    <div class="contact">
+        <div class="sub">
+
+            <p>Get in Touch</p>
+            <h1>Contact Me</h1>
+
+            <div class="mail">
+                <p><i class="fa-light fa-envelope"></i><a href="contact.html">Click here</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- -----copyright section---------- -->
+
+    <div class="copyright">
+        <div class="copy-section">
+            <p>Copyright 2023,Designed by Ramana</p>
+        </div>
+    </div>
+</body>
+<script>
+
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove('active')
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove('active-tab')
+        }
+        document.getElementById(tabname).classList.add('active-tab')
+    }
+
+const menu = document.querySelector('.menu');
+const menulist = document.querySelector('.lists li');
+
+menu.addEventListener('click',()=>{
+    menulist.classList.toggle('showmenu');
+})
+
+ 
+</script>
+
+</html>
